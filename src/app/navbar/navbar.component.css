@@ -1,0 +1,125 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  background-color: #1976d2;
+  color: white;
+}
+
+.app-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.app-name {
+  font-size: 1.2em;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.username {
+  margin-top: 8px;
+}
+
+.sidebar-icon {
+  margin-right: 16px;
+}
+
+.sidebar-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+.sidebar-label mat-icon {
+  margin-bottom: 4px;
+}
+
+.minimized-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  z-index: 1;
+  transition: width 0.3s;
+}
+
+.minimized-icon {
+  margin: 8px 0;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.54);
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.minimized-icon:hover {
+  color: #1976d2;
+}
+
+.minimized {
+  width: 0;
+}
+
+.content-container {
+   margin-left: 80px;
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 64px);
+}
+
+.mat-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.mat-sidenav{
+
+  width: 250px;
+
+}
+.sidebar-icon {
+  margin-right: 16px;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.sidenav-closed .sidebar-icon {
+  opacity: 0;
+}
+
+.sidebar-label:hover .sidebar-icon {
+  opacity: 1;
+}

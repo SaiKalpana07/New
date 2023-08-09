@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-toolbar >
+
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+      <img class="app-logo" src="../../assets/LOGO.jpg" alt="App Logo">
+      <span class="app-name"> Todo application</span>
+    </button>
+    
+    <span class="spacer"></span>
+  
+    <button mat-button (click)="logout()">Logout</button>
+  </mat-toolbar>
+
+
+  <mat-sidenav #sidenav mode="side" [opened]="isSidebarOpen">
+
+  <br> <br> <br>
+
+    <div class="profile-section">
+      <img class="profile-picture" src="../../assets/profilePic.webp" alt="Profile Picture">
+      <span class="username">Prasath</span>
+    </div>
+  
+    <mat-nav-list>
+      <mat-list-item *ngFor="let link of sidebarLinks" routerLink="{{ link.route }}">
+        <mat-icon class="sidebar-icon">{{ link.icon }}</mat-icon>
+       {{ link.label }}
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  
+  <div class="content-container">
+  <app-list></app-list>
+  </div>
+</mat-sidenav-container>

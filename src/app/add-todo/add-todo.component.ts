@@ -24,11 +24,20 @@ export class AddTodoComponent {
       priority: 'High',
       date: new Date(),
       id: 0,
-      complete_percentage:0
+      complete_percentage:0,
+      assignedEmployee: {
+        id: 1,
+        name: '',
+        image: ''
+      }
       
     };
   this: any;
-  AddTodo: TodoInterface = { id: 0,title: '', description: '', status: 'todo',date:new Date() ,priority:'High',complete_percentage:0 };
+  AddTodo: TodoInterface = { id: 0,title: '', description: '', status: 'todo',date:new Date() ,priority:'High',complete_percentage:0,assignedEmployee: {
+    id: 1,
+    name: '',
+    image: ''
+  } };
   showErrorMessage: boolean = false;
  
   
@@ -44,7 +53,7 @@ export class AddTodoComponent {
         dialogConfig.autoFocus = true;
         dialogConfig.width = '400px';
         dialogConfig.position = { top: '50%', left: '50%'};
-        dialogConfig.panelClass = 'custom-dialog-container'; // Custom CSS class for styling the dialog container
+        dialogConfig.panelClass = 'custom-dialog-container';
     
         this.dialog.open(AddTodoComponent, dialogConfig);
       }
@@ -77,9 +86,13 @@ export class AddTodoComponent {
         description: this.taskForm.value.description,
         status: this.selectedStatus,
         priority: this.selectedPriority,
-        date: this.taskForm.value.date,
-      
-        complete_percentage: 0
+        date: this.taskForm.value.date, 
+        complete_percentage: 0,
+        assignedEmployee: {
+          id: 1,
+          name: '',
+          image: ''
+        }
       };
       console.log(newTodo);
   

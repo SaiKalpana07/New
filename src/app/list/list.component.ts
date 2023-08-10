@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
   inprogressSubscription: Subscription;
   completedSubscription: Subscription;
   SearchText:string='';
- 
+
   todoSearchText: string = '';
   progressSearchText: string = '';
   completedSearchText: string = '';
@@ -70,7 +70,7 @@ export class ListComponent implements OnInit {
       moveItemInArray(this.todo, previousIndex, newIndex);
     } else {
       transferArrayItem(
-       
+
         event.previousContainer.data,
         event.container.data,
         event.previousIndex,
@@ -85,25 +85,25 @@ export class ListComponent implements OnInit {
 
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '600px'; // Set the width of the dialog (adjust as needed)
-    
+
     // Set the custom position of the dialog
     dialogConfig.position = { top: '100px', left: '40%' };
-  
+
     const dialogRef = this.dialog.open(AddTodoComponent, dialogConfig);
-    
+
     dialogRef.afterClosed().subscribe((result) => {
-     
+
       if (result) {
         console.log('New Task:', result);
-        
+
       }
     });
-  } 
+  }
 
   toggleTodoStatus(id: number, completed: boolean): void {
     this.todoService.updateTodoStatus(id, completed);
   }
- 
+
   filterTodosBySearch(searchText: string, todos: any[]): any[] {
     if (!searchText) {
       return todos;
@@ -124,9 +124,5 @@ export class ListComponent implements OnInit {
 
 
   }
-
-
-
-
 
 

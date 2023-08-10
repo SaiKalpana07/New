@@ -7,11 +7,12 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChartComponent } from '@syncfusion/ej2-angular-charts';
 import { AuthService } from './Service/auth.service';
+import { TeammembersComponent } from './teammembers/teammembers.component';
 
 
 const routes: Routes = [
 
-  { path: '', component: LoginComponent }, 
+  { path: '', component: TeammembersComponent }, 
 
   {path:'login',component:LoginComponent,canActivate:[AuthService]},
   { path: 'list', component: NavbarComponent }, 

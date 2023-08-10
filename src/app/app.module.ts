@@ -29,6 +29,10 @@ import { AccumulationChartModule, PieSeriesService, AccumulationDataLabelService
   AccumulationTooltipService } from '@syncfusion/ej2-angular-charts';
 import { FilterPipe } from './filter.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import { TimeDisplayComponent } from './time-display/time-display.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 
 
@@ -43,9 +47,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddTodoComponent,
     LoginComponent,
     ChartComponent,
-    FilterPipe
+    FilterPipe,
+    TimeDisplayComponent,
+    EditEmployeeComponent,
+    AddEmployeeComponent
 
- 
+
   ],
   imports: [
     BrowserModule,
@@ -68,9 +75,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule ,
     MatSidenavModule,
     MatToolbarModule,
-    AccumulationChartModule,ReactiveFormsModule
+    AccumulationChartModule,ReactiveFormsModule,
+    MatCardModule,
+    FormsModule,
 
-  
+
   ],
   providers: [NavigationServiceService,PieSeriesService,AccumulationDataLabelService,AccumulationLegendService,AccumulationTooltipService],
   bootstrap: [AppComponent],

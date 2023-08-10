@@ -10,7 +10,9 @@
   background-color: #1976d2;
   color: white;
 }
-
+#icon-list{
+  margin-bottom:-3px;
+}
 .app-logo {
   width: 40px;
   height: 40px;
@@ -19,6 +21,7 @@
 
 .app-name {
   font-size: 1.2em;
+  margin-left:50rem;
 }
 
 .profile-section {
@@ -27,11 +30,16 @@
   align-items: center;
   padding: 16px;
 }
+.profile-info{
+  display: flex;
+  align-items: center;
+}
 
 .profile-picture {
-  width: 80px;
-  height: 80px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  margin-right:13px;
 }
 
 .username {
@@ -51,6 +59,15 @@
 }
 .sidebar-label mat-icon {
   margin-bottom: 4px;
+}
+#sidenav{
+  width:350px;
+}
+#sidenav.menu-close{
+ width:70px;
+}
+#sidenav.menu-open{
+  width:350px;
 }
 
 .minimized-icons {
@@ -114,6 +131,7 @@
   display: inline-block;
   opacity: 1;
   transition: opacity 0.3s;
+  padding-top:5px;
 }
 
 .sidenav-closed .sidebar-icon {
@@ -123,3 +141,24 @@
 .sidebar-label:hover .sidebar-icon {
   opacity: 1;
 }
+.mat-mdc-card-header{
+  display:flex;
+  padding:0px;
+}
+.mat-mdc-card{
+  margin-top:-4rem;
+}
+.main-header{
+  background-color: #1a8ca3 ;
+  color:white;
+}
+.nav-icons{
+  display:flex;
+}
+.time{
+  margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+/* .title{
+  text-align:center;
+} */

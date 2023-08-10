@@ -14,7 +14,12 @@ export class TodoServiceService {
       status: 'inprogress',
       date: new Date('2023-08-03'),
       priority: 'High',
-      complete_percentage:30
+      complete_percentage:30,
+      assignedEmployee: {
+        id: 1,
+        name: 'Sai kalpana',
+        image: ''
+      }
     },
     {
       id: 2,
@@ -23,18 +28,31 @@ export class TodoServiceService {
       status: 'completed',
       date: new Date('2023-08-04'),
       priority: 'Low',
-      complete_percentage:80
+      complete_percentage:80,
+      assignedEmployee: {
+        id: 1,
+        name: 'BabuPrasath',
+        image: ''
+      }
     },
     {
       id: 3,
       title: 'Read a Book',
       description: 'Read an interesting novel.',
-      status: 'completed',
+      status: 'NotStarted',
       date: new Date('2023-08-05'),
 	  priority: 'Medium',
-    complete_percentage:100
+    complete_percentage:100,
+    assignedEmployee: {
+      id: 1,
+      name: 'Sulaiman',
+      image: ''
+    }
     },
   ];
+
+
+  
   lastId: number = this.todoList.length > 0 ? this.todoList[this.todoList.length - 1].id : 0;
 
   getAll() {
@@ -60,6 +78,11 @@ export class TodoServiceService {
       todo.status = 'completed';
     }
   }
-
+  updateTodo(updatedTodo: TodoInterface): void {
+    const index = this.todoList.findIndex(item => item.id === updatedTodo.id);
+    if (index !== -1) {
+      this.todoList[index] = updatedTodo;
+    }
+  }
 }
 
